@@ -1,0 +1,18 @@
+.swipebuttons-container {
+  position: fixed;
+  bottom: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.swipebuttons-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  font-size: 30px !important;
+  background-color: white;
+}

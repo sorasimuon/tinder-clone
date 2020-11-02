@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header-icon {
+  font-size: 100px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.header-logo {
+  height: 40px;
+  object-fit: contain;
+}
