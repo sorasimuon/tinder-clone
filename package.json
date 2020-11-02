@@ -15,11 +15,14 @@
     "react-tinder-card": "^1.3.1",
     "web-vitals": "^0.2.4"
   },
+  "homepage": "http://sorasimuon.github.io/tinder-clone",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
