@@ -86,6 +86,10 @@ function Register() {
       } else {
         document.getElementById("pwdRule3").style.color = "rgb(156, 58, 58)";
       }
+    } else {
+      document.getElementById("pwdRule1").style.color = "rgb(156, 58, 58)";
+      document.getElementById("pwdRule2").style.color = "rgb(156, 58, 58)";
+      document.getElementById("pwdRule3").style.color = "rgb(156, 58, 58)";
     }
   };
 
