@@ -73,12 +73,18 @@ function Register() {
       const regex3 = new RegExp("[!@#$%^&*]+");
       if (regex1.test(password)) {
         document.getElementById("pwdRule1").style.color = "green";
+      } else {
+        document.getElementById("pwdRule1").style.color = "rgb(156, 58, 58)";
       }
       if (regex2.test(password)) {
         document.getElementById("pwdRule2").style.color = "green";
+      } else {
+        document.getElementById("pwdRule2").style.color = "rgb(156, 58, 58)";
       }
       if (regex3.test(password)) {
         document.getElementById("pwdRule3").style.color = "green";
+      } else {
+        document.getElementById("pwdRule3").style.color = "rgb(156, 58, 58)";
       }
     }
   };
