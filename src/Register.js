@@ -217,7 +217,7 @@ function Register() {
                 <p>Password must contain:</p>
 
                 <ul className={"passwordRules passwordRules-red"}>
-                  <li id="pwdRule1">HEllo At least 8 characters</li>
+                  <li id="pwdRule1">At least 8 characters</li>
                   <li id="pwdRule2">At least 1 number</li>
                   <li id="pwdRule3">
                     At least 1 special character among: ! @ # $ % ^ & *
