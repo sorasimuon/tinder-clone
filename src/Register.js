@@ -58,7 +58,7 @@ function Register() {
   // Check if both passwords entered are matching
   const checkPasswordMatching = () => {
     console.log("check");
-    if (password != "" || password2 != "") {
+    if (password !== "" || password2 !== "") {
       console.log(password + " / " + password2);
       setPasswordMatch(password === password2 ? true : false);
     }
@@ -67,14 +67,26 @@ function Register() {
   };
 
   const checkPasswordRule = () => {
-    const regex1 = new RegExp(".{8,}");
-    const regex2 = new RegExp("[0-9]+");
-    const regex3 = new RegExp("[();,?/[]|*-_+=@#$%^]+");
+    if (password !== "") {
+      const regex1 = new RegExp(".{8,}");
+      const regex2 = new RegExp("[0-9]+");
+      const regex3 = new RegExp("[!@#$%^&*]+");
+      if (regex1.test(password)) {
+        document.getElementById("pwdRule1").style.color = "green";
+      }
+      if (regex2.test(password)) {
+        document.getElementById("pwdRule2").style.color = "green";
+      }
+      if (regex3.test(password)) {
+        document.getElementById("pwdRule3").style.color = "green";
+      }
+    }
   };
 
   useEffect(() => {
     checkPasswordMatching();
-  }, [password2]);
+    checkPasswordRule();
+  }, [password2, password]);
 
   const registerNewAccount = async (e) => {
     e.preventDefault();
@@ -205,11 +217,10 @@ function Register() {
                 <p>Password must contain:</p>
 
                 <ul className={"passwordRules passwordRules-red"}>
-                  <li>At least 8 characters</li>
-                  <li>At least 1 number</li>
-                  <li>
-                    At least 1 special character among: ( ) ; , ? / [ ] \ | * -
-                    _ + = @ # $ % ^
+                  <li id="pwdRule1">At least 8 characters</li>
+                  <li id="pwdRule2">At least 1 number</li>
+                  <li id="pwdRule3">
+                    At least 1 special character among: ! @ # $ % ^ & *
                   </li>
                 </ul>
 
@@ -217,7 +228,7 @@ function Register() {
               </div>
 
               <FormLabel component="legend" className="label">
-                Gender
+                Gender (optional)
               </FormLabel>
               <RadioGroup
                 aria-label="gender"
